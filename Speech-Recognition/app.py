@@ -18,6 +18,11 @@ def index():
         
         if file:
             recognizer = sr.Recognizer()
+            audioFile = sr.AudioFile(file)
+            with audioFile as source:
+                data = recognizer.record(source)
+                
+
 
 
 
