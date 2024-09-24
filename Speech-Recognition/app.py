@@ -22,7 +22,8 @@ def index():
             with audioFile as source:
                 data = recognizer.record(source)
             text = recognizer.recognize_google(data, key=None)
-            
+            print(text)
+
 
 
 
