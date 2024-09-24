@@ -15,7 +15,26 @@ def index():
         file = request.files["file"]
         if file.filename == "":
             return redirect(request.url)
+        
+        if file:
+            recognizer = sr.Recognizer()
+
+
+
+
+
+
+
+
+
+
+
+
     return render_template('index.html')
+
+
+
+
 
 if __name__ == '__main__':
     app.run(debug=True)
