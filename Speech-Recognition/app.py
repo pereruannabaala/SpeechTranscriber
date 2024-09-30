@@ -5,6 +5,8 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET','POST'])
 def index():
+    transcript = ""
+
     if request.method == 'POST':
         print("FORM DATA RECEIVED")
     
@@ -20,11 +22,11 @@ def index():
             audioFile = sr.AudioFile(file)
             with audioFile as source:
                 data = recognizer.record(source)
-            text = recognizer.recognize_google(data, key=None)
-            print(text)
+            transcript = recognizer.recognize_google(data, key=None)
+            print(transcript)
 
 
-    return render_template('index.html')
+    return render_template('index.html', transcript=transcript)
 
 
 if __name__ == '__main__':
