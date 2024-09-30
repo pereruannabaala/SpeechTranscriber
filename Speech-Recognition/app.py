@@ -1,6 +1,5 @@
 from flask import Flask, render_template, request, redirect
-import speech_recognition as sr
-
+import speech_recognition as sr 
 
 app = Flask(__name__)
 
@@ -25,24 +24,7 @@ def index():
             print(text)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     return render_template('index.html')
-
-
-
 
 
 if __name__ == '__main__':
