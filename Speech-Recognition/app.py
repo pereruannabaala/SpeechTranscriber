@@ -23,7 +23,7 @@ def index():
             with audioFile as source:
                 data = recognizer.record(source)
             transcript = recognizer.recognize_google(data, key=None)
-            print(transcript)
+            
 
 
     return render_template('index.html', transcript=transcript)
