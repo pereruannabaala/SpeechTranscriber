@@ -18,10 +18,12 @@
                 <input type="submit" value="Transcribe"/>
             </form>
 
+            {% if transcript != "" %}
             <div id="SpeechTranscriptContainer">
                 <h1>Transcript</h1>
                 <p>{{transcript}}</p>
             </div>
+            {% endif %}
         </div>
 
         
