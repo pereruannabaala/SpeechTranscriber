@@ -7,7 +7,7 @@
         <title>Speech Transcriber</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="{{url_for('static, filename='css/styles.css')}}">
     </head>
     <body>
         <div id="speechcontainer">
@@ -19,9 +19,9 @@
             </form>
 
             {% if transcript != "" %}
-            <div id="SpeechTranscriptContainer">
+            <div id="speechTranscriptContainer">
                 <h1>Transcript</h1>
-                <p>{{transcript}}</p>
+                <p id="speechtext">{{transcript}}</p>
             </div>
             {% endif %}
         </div>
