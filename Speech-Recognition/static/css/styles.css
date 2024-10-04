@@ -2,3 +2,15 @@ h1, p, input {
     font-family: 'Lato', sans-serif;
 }
 
+#speechcontainer {
+    margin: 20px;
+}
+
+#submitbutton {
+    background-color: #0191FE;
+    color:white;
+    border-radius: 5px;
+    border: none;
+    padding: 10px 3px;
+}
+
