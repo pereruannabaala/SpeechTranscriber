@@ -10,7 +10,8 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="{{url_for('static, filename='css/styles.css')}}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
     </head>
     <body>
         <div id="speechcontainer">
@@ -18,7 +19,7 @@
             <form method="post" enctype="multipart/form-data">
                 <input type="file" name="file"/>
                 <br>
-                <input type="submit" value="Transcribe"/>
+                <input type="submit" id="submitbutton" value="Transcribe"/>
             </form>
 
             {% if transcript != "" %}

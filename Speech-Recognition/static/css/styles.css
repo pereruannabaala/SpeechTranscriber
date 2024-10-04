@@ -9,6 +9,7 @@ h1, p, input {
 #submitbutton {
     background-color: #0191FE;
     color:white;
+    width: 10%;
     border-radius: 5px;
     border: none;
     padding: 10px 3px;
@@ -21,4 +22,9 @@ h1, p, input {
 
 #speechTranscriptContainer {
     margin-top: 20px;
+}
+
+#speechtext {
+    font-size: 18px;
+    width: 40%;
 }
