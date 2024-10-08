@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Speech Transcriber</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
+    </head>
+    <body>
+        <div id="speechcontainer">
+            <h1>Upload New File</h1>
+            <form method="post" enctype="multipart/form-data">
+                <input type="file" name="file"/>
+                <br>
+                <input type="submit" id="submitbutton" value="Transcribe"/>
+            </form>
+
+            {% if transcript != "" %}
+            <div id="speechTranscriptContainer">
+                <h1>Transcript</h1>
+                <p id="speechtext">{{transcript}}</p>
+            </div>
+            {% endif %}
+        </div>
+
+        
+        <script src="" async defer></script>
+    </body>
+</html>
